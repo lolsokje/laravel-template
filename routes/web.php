@@ -1,7 +1,6 @@
 <?php
 
+use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    phpinfo();
-});
+Route::get('/', IndexController::class)->name('index');

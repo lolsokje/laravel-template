@@ -4,6 +4,21 @@ A template consisting of the packages, tools, etc. I usually use for every new L
 
 Aside from Laravel, this template comes with;
 
+### Installation
+
+You can create a new project using this template via composer:
+
+```bash
+# Download the template
+composer create-project --prefer-dist lolsokje/laravel-template
+
+# Install the NPM dependencies
+npm install
+
+# Run Vite
+npm run dev
+```
+
 ### Frameworks
 
 - [Vue.js](https://vuejs.org/)

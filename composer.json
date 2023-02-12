@@ -1,7 +1,7 @@
 {
-  "name": "laravel/laravel",
+  "name": "lolsokje/laravel-template",
   "type": "project",
-  "description": "The Laravel Framework.",
+  "description": "A template consisting of the packages, tools, etc. I usually use for every new Laravel application.",
   "keywords": [
     "framework",
     "laravel"

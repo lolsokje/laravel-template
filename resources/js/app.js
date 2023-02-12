@@ -2,6 +2,7 @@ import { createInertiaApp, Head, Link } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createApp, h } from 'vue';
 import '../css/app.css';
+import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m.js';
 
 const appName = window.document.getElementsByName('title')[0]?.innerText || 'Laravel';
 
@@ -11,6 +12,7 @@ createInertiaApp({
     setup ({ el, App, props, plugin }) {
         return createApp({ render: () => h(App, props) })
             .use(plugin)
+            .use(ZiggyVue, Ziggy)
             .component('InertiaHead', Head)
             .component('InertiaLink', Link)
             .mount(el);

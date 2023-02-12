@@ -20,8 +20,9 @@
     "laravel/pint": "^1.0",
     "laravel/sail": "^1.18",
     "mockery/mockery": "^1.4.4",
-    "nunomaduro/collision": "^7.0",
-    "phpunit/phpunit": "^10.0",
+    "nunomaduro/collision": "^6.1",
+    "pestphp/pest": "^1.20",
+    "pestphp/pest-plugin-parallel": "^1.2",
     "spatie/laravel-ignition": "^2.0"
   },
   "autoload": {
@@ -52,9 +53,6 @@
     ]
   },
   "extra": {
-    "branch-alias": {
-      "dev-master": "10.x-dev"
-    },
     "laravel": {
       "dont-discover": []
     }

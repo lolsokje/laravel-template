@@ -7,12 +7,14 @@ import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m.js';
 const appName = window.document.getElementsByName('title')[0]?.innerText || 'Laravel';
 
 createInertiaApp({
-    title: (title) => `${title} - ${appName}`,
-    resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),
+    title: (title: string): string => `${title} - ${appName}`,
+    // @ts-ignore
+    resolve: (name: string): Promise<any> => resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),
+    // @ts-ignore
     setup ({ el, App, props, plugin }) {
         return createApp({ render: () => h(App, props) })
             .use(plugin)
-            .use(ZiggyVue, Ziggy)
+            .use(ZiggyVue)
             .component('InertiaHead', Head)
             .component('InertiaLink', Link)
             .mount(el);
